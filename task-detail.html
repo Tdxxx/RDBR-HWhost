@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Detail</title>
+    <link rel="stylesheet" href="./css/taskpage.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <div class="header-content">
+            <div class="logo-container">
+                <a href="index.html"> <h1 class="logo-text">Momentum</h1></a> 
+                <img src="./img/Hourglass.png" alt="Momentum logo" class="logo-image" />
+                <div class="button-container">
+                    <button id="btn-add-employee" class="btn1">თანამშრომლის შექმნა</button>
+                    <a href="create-task.html">
+                        <button class="btn2">შექმენი ახალი დავალება</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="task-container">
+        <article class="task-details">
+            <section class="task-header">
+                <div class="task-badges">
+                    <span class="priority-badge">
+                        <img src="https://momentum.redberryinternship.ge/storage/priority-icons/Low.svg" alt="Priority icon" class="badge-icon" />
+                        <span class="badge-text" id="priority-name">დაბალი</span>
+                    </span>
+                    <span class="category-badge" id="task-department">ადამიანური რესურსების დეპარტამენტი</span>
+                </div>
+                <h1 class="task-title" id="task-name">Task Title</h1>
+                <p class="task-description" id="task-description">Task Description</p>
+            </section>
+
+            <section class="task-metadata">
+                <h2 class="metadata-title">დავალების დეტალები</h2>
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <div class="metadata-label">
+                            <img src="./img/pie-chart.png" alt="Status icon" class="metadata-icon" />
+                            <span>სტატუსი</span>
+                        </div>
+                        <div class="status-selector">
+                            <span class="status-text" id="task-status">Task Status</span>
+                        </div>
+                    </div>
+
+                    <div class="metadata-item">
+                        <div class="metadata-label">
+                            <div class="user-icon">
+                                <img src="./img/progile.png" alt="User icon top" />
+                            </div>
+                            <span>თანამშრომელი</span>
+                        </div>
+                        <div class="assignee-info">
+                            <span class="department" id="employee-department">Department Name</span>
+                            <div class="assignee">
+                                <img src="./img/avat-d.png" alt="Assignee avatar" class="avatar" id="employee-avatar" />
+                                <span class="assignee-name" id="employee-name">Employee Name</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="metadata-item">
+                        <div class="metadata-label">
+                            <img src="./img/avat.png" alt="Calendar icon" class="metadata-icon" />
+                            <span>დავალების ვადა</span>
+                        </div>
+                        <span class="deadline" id="task-due-date">Due Date</span>
+                    </div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <script src="./js/task-detail.js"></script>
+    
+</body>
+</html>

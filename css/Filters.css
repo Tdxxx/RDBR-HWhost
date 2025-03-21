@@ -1,0 +1,42 @@
+
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; 
+    padding: 10px 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 12px;
+    background-color: white;
+    width: fit-content;
+    margin: 20px auto; 
+    flex-wrap: wrap; 
+}
+
+
+.filter-content {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    cursor: pointer; 
+}
+
+
+.dropdown-icon {
+    width: 20px;
+    height: 20px;
+    fill: #8338EC;
+}
+
+
+.filter-content select {
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+}

@@ -1,0 +1,122 @@
+[
+    {
+      "id": 894,
+      "name": "შექმენით readme ფაილი",
+      "description": "აღწერეთ შესრულებული დავალება რიდმი ფაილით",
+      "due_date": "2025-12-30T20:00:00.000000Z",
+      "department": {
+        "id": 2,
+        "name": "ადამიანური რესურსების დეპარტამენტი"
+      },
+      "employee": {
+        "id": 896,
+        "name": "Carissa Luettgen",
+        "surname": "Moore",
+        "avatar": "https://momentum.redberryinternship.ge/storage/https://via.placeholder.com/640x480.png/00ff66?text=in",
+        "department": {
+          "id": 2,
+          "name": "ადამიანური რესურსების დეპარტამენტი"
+        }
+      },
+      "status": {
+        "id": 1,
+        "name": "დასაწყები"
+      },
+      "priority": {
+        "id": 1,
+        "name": "დაბალი",
+        "icon": "https://momentum.redberryinternship.ge/storage/priority-icons/Low.svg"
+      },
+      "total_comments": 0
+    },
+    {
+      "id": 8,
+      "name": "შექმენით UI დიზაინი",
+      "description": "კლიენიტს მოთხოვნების ფაილის მიხედვით შექმენით დიზაინი",
+      "due_date": "2025-12-27T20:00:00.000000Z",
+      "department": {
+        "id": 2,
+        "name": "ადამიანური რესურსების დეპარტამენტი"
+      },
+      "employee": {
+        "id": 896,
+        "name": "Carissa Luettgen",
+        "surname": "Moore",
+        "avatar": "https://momentum.redberryinternship.ge/storage/https://via.placeholder.com/640x480.png/00ff66?text=in",
+        "department": {
+          "id": 2,
+          "name": "ადამიანური რესურსების დეპარტამენტი"
+        }
+      },
+      "status": {
+        "id": 2,
+        "name": "პროგრესში"
+      },
+      "priority": {
+        "id": 2,
+        "name": "საშუალო",
+        "icon": "https://momentum.redberryinternship.ge/storage/priority-icons/Medium.svg"
+      },
+      "total_comments": 0
+    },
+    {
+      "id": 1,
+      "name": "წლიური ზრდის ვიზუალიზაცია",
+      "description": "წარმოადგინეთ მონაცემები ვიზუალურად მიმზიდველ და გამართულ ფორმაში",
+      "due_date": "2025-06-01T20:00:00.000000Z",
+      "department": {
+        "id": 1,
+        "name": "ადმინისტრაციის დეპარტამენტი"
+      },
+      "employee": {
+        "id": 901,
+        "name": "ნიკა",
+        "surname": "ნოკია",
+        "avatar": "https://momentum.redberryinternship.ge/storage/employee-avatars/SIG4lWZeTat4mc3t6E0TRjcMaMo31ypEqypa4IqT.jpg",
+        "department": {
+          "id": 1,
+          "name": "ადმინისტრაციის დეპარტამენტი"
+        }
+      },
+      "status": {
+        "id": 1,
+        "name": "დასაწყები"
+      },
+      "priority": {
+        "id": 3,
+        "name": "მაღალი",
+        "icon": "https://momentum.redberryinternship.ge/storage/priority-icons/High.svg"
+      },
+      "total_comments": 0
+    },
+    {
+      "id": 907,
+      "name": "საიტის ლოგიკის ფაილების კორექტირება",
+      "description": "გადახედეთ კოდის ფაილებს და საჭიროების შემთხვევაშ გაასწორეთ ლოგიკა",
+      "due_date": "2025-06-01T20:00:00.000000Z",
+      "department": {
+        "id": 2,
+        "name": "ადამიანური რესურსების დეპარტამენტი"
+      },
+      "employee": {
+        "id": 904,
+        "name": "Orlo Mueller",
+        "surname": "Bahringer",
+        "avatar": "https://momentum.redberryinternship.ge/storage/https://via.placeholder.com/640x480.png/00aa77?text=quae",
+        "department": {
+          "id": 2,
+          "name": "ადამიანური რესურსების დეპარტამენტი"
+        }
+      },
+      "status": {
+        "id": 3,
+        "name": "მზად ტესტირებისთვის"
+      },
+      "priority": {
+        "id": 1,
+        "name": "დაბალი",
+        "icon": "https://momentum.redberryinternship.ge/storage/priority-icons/Low.svg"
+      },
+      "total_comments": 0
+    }
+  ]

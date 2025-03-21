@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momentum</title>
+    <link rel="stylesheet" href="./css/create-task.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header__logo">
+          <a href="index.html"><img src="./img/logo.png" alt="logo" /></a>
+        </div>
+        <nav class="header__nav">
+          <button id="btn-add-employee" class="btn1">თანამშრომლის შექმნა</button>
+          <button class="btn2">+ შექმენი ახალი დავალება</button>
+        </nav>
+      </header>
+
+      <main class="main">
+        <h1 class="main__title">შექმენი ახალი დავალება</h1>
+
+        <form class="task-form">
+          <div class="task-form__grid">
+            <section class="task-form__section">
+              <div class="form-group">
+                <label class="form-label">სათაური*</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="მინიმუმ 2 სიმბოლო მაქსიმუმ 255 სიმბოლო"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">აღწერა</label>
+                <textarea
+                  class="form-textarea"
+                  placeholder="მინიმუმ 2 სიმბოლო მაქსიმუმ 255 სიმბოლო"
+                ></textarea>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group form-group--half">
+                  <label class="form-label">პრიორიტეტი*</label>
+                  <select class="form-select">
+                    <option>საშუალო</option>
+                    <option>დაბალი</option>
+                    <option>მაღალი</option>
+                  </select>
+                </div>
+                <div class="form-group form-group--half">
+                  <label class="form-label">სტატუსი*</label>
+                  <select class="form-select">
+                    <option>დასაწყები</option>
+                  </select>
+                </div>
+              </div>
+            </section>
+
+            <section class="task-form__section">
+              <div class="form-group">
+                <label class="form-label">თანამშრომელი*</label>
+                <select id="employee-select" class="form-select">
+                  <option>Loading...</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">პასუხისმგებელი თანამშრომელი</label>
+                <select id="employee-select-responsible" class="form-select">
+                  <option>Loading...</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">დედლაინი</label>
+                <input type="text" class="form-input" placeholder="DD/MM/YYYY" />
+              </div>
+            </section>
+          </div>
+
+          <div class="task-form__actions">
+            <button type="submit" class="submit-button">დავალების შექმნა</button>
+          </div>
+        </form>
+      </main>
+    </div>
+
+    <script>
+     
+      document.addEventListener("DOMContentLoaded", function () {
+        const employeeSelect = document.getElementById("employee-select");
+        const employeeSelectResponsible = document.getElementById("employee-select-responsible");
+
+        
+        fetch("bknd/employees.json")
+          .then(response => response.json())
+          .then(employees => {
+            console.log("Employees loaded:", employees);
+
+            
+            employeeSelect.innerHTML = "";
+            employeeSelectResponsible.innerHTML = "";
+
+            
+            const defaultOption = document.createElement("option");
+            defaultOption.value = "";
+            defaultOption.textContent = "აირჩიეთ თანამშრომელი";
+            employeeSelect.appendChild(defaultOption);
+
+            
+            employees.forEach(emp => {
+              let option = document.createElement("option");
+              option.value = emp.id;
+              option.textContent = `${emp.name} ${emp.surname}`;
+              employeeSelect.appendChild(option);
+
+              
+              let responsibleOption = document.createElement("option");
+              responsibleOption.value = emp.id;
+              responsibleOption.textContent = `${emp.name} ${emp.surname}`;
+              employeeSelectResponsible.appendChild(responsibleOption);
+            });
+          })
+          .catch(error => console.error("Error loading employees:", error));
+      });
+    </script>
+  </body>
+</html>

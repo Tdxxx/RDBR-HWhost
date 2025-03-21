@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    
+    <div class="logo-container">
+        <img src="./img/logo.png" class="logo" alt="Momentum Logo">
+    </div>
+
+    <h2 class="page-title">დავალებების გვერდი</h2>
+
+    
+    <div class="button-container">
+        <button id="btn-add-employee" class="btn1">თანამშრომლის შექმნა</button>
+        <a href="create-task.html">
+            <button class="btn2">
+                შექმენი ახალი დავალება
+                <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 1024 1024">
+                    <path fill="currentColor" d="M480 480V128a32 32 0 0 1 64 0v352h352a32 32 0 1 1 0 64H544v352a32 32 0 1 1-64 0V544H128a32 32 0 0 1 0-64z"/>
+                </svg>
+            </button>
+        </a>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="filter-box"> 
+        <div class="filters">
+            <div class="filter-content">
+                <select id="department-filter">
+                    <option value="">დეპარტამენტი</option>
+                    <option value="ადმინისტრაცია">ადმინისტრაციის</option>
+                    <option value="ადამიანური რესურსები">ადამიანური რესურსების</option>
+                    <option value="ფინანსები">ფინანსების</option>
+                </select>
+            </div>
+    
+            <div class="filter-content">
+                <select id="priority-filter">
+                    <option value="">პრიორიტეტი</option>
+                    <option value="დაბალი">დაბალი</option>
+                    <option value="საშუალო">საშუალო</option>
+                    <option value="მაღალი">მაღალი</option>
+                </select>
+            </div>
+    
+            <div class="filter-content">
+                <select id="employee-filter">
+                    <option value="">თანამშრომელი</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sections -->
+    <div class="section-container">
+        <div class="column">
+            <h3 class="section-header1">დასაწყები</h3>
+            <section id="Must-start"></section>
+        </div>
+        <div class="column">
+            <h3 class="section-header2">პროგრესში</h3>
+            <section id="in-progress"></section>
+        </div>
+        <div class="column">
+            <h3 class="section-header3">მზად ტესტირებისთვის</h3>
+            <section id="ready-to-test"></section>
+        </div>
+        <div class="column">
+            <h3 class="section-header4">დასრულებული</h3>
+            <section id="finished"></section>
+        </div>
+    </div>
+
+    <!-- Task Board (All tasks go here dynamically) -->
+    <div id="task-board" class="task-board-container"></div>
+
+    <!-- Employee Modal -->
+    <div class="modal-backdrop" id="backdrop"></div>
+    <div class="modal" id="employee-modal">
+        <header class="modal-header">
+            <img src="./img/close-icon.png" alt="Close modal" class="close-icon" id="close-btn">
+        </header>
+        <main class="modal-content">
+            <h1 class="modal-title">თანამშრომლის დამატება</h1>
+            <form class="employee-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label class="form-label">სახელი*</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-input">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label class="form-label">გვარი*</label>
+                        <div class="input-wrapper">
+                            <input type="text" class="form-input">
+                        </div>
+                    </div>
+                </div>
+                <section class="avatar-section">
+                    <label class="form-label-avatar">ავატარი*</label>
+                    <div class="avatar-upload">
+                        <img src="./img/avat.png" alt="Avatar preview" class="avatar-preview">
+                    </div>
+                </section>
+                <div class="department-group">
+                    <label class="form-label">დეპარტამენტი*</label>
+                    <div class="select-wrapper">
+                        <select class="department-select">
+                            <option value="" selected disabled>აირჩიეთ დეპარტამენტი</option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <footer class="modal-footer">
+                <button class="btn-cancel" id="cancel-button">გაუქმება</button>
+                <button class="btn-submit">დაამატე თანამშრომელი</button>
+            </footer>
+        </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Added jQuery -->
+
+    <script>
+        // JavaScript to change filter labels and icons color on opening
+        const primaryColor = "#3498db"; // Set primary color
+
+        $(document).ready(function() {
+            // When filters section is clicked, change the color of the labels and icons
+            $('.filters select').on('focus', function() {
+                // Change the color of the label and the icon to primary color
+                $(this).siblings('label').css('color', primaryColor); // Change label color
+                $(this).siblings('.filter-icon').css('color', primaryColor); // Change icon color (if any)
+            });
+
+            // Reset the color of the labels and icons when the select loses focus
+            $('.filters select').on('blur', function() {
+                $(this).siblings('label').css('color', ''); // Reset label color
+                $(this).siblings('.filter-icon').css('color', ''); // Reset icon color (if any)
+            });
+        });
+    </script>
+
+</body>
+</html>

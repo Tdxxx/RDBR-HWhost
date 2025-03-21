@@ -1,0 +1,664 @@
+/* Root Variables */
+:root {
+  --primary-color: #8338ec;
+  --progress-color: #fb5607;
+  --testing-color: #ff006e;
+  --completed-color: #3a86ff;
+  --text-dark: #212529;
+  --text-gray: #343a40;
+  --border-color: #dee2e6;
+}
+
+/* Header and Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 120px;
+  margin-top: 37px;
+}
+
+.logo {
+  font-size: 31px;
+  color: var(--primary-color);
+  margin-left: 20px;
+}
+
+.logo-icon {
+  width: 33px;
+  height: auto;
+}
+
+.page-title {
+  margin-left: 120px; /* Adjusted for perfect alignment */
+  display: flex;
+  align-items: center;
+  margin-top: 125px;
+}
+
+/* Button Styles */
+.button-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.btn1 {
+  background-color: white;
+  width: 225px;
+  height: 39px;
+  border: 1px solid var(--primary-color);
+  color: var(--text-dark);
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 35px;
+}
+
+.btn2 {
+  background-color: var(--primary-color);
+  width: 225px;
+  height: 39px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#department-filter {
+    font-size: 16px;    
+    margin-top: 10px;
+    border: none;
+}
+#priority-filter {
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+}
+#employee-filter{
+    font-size: 16px;
+    margin-top: 10px;
+    border: none;
+}
+
+.filter-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 688px;
+  height: 50px;
+  margin: 50px auto 0; /* 50px space from the top */
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px; /* Ensure spacing inside */
+  margin-left: 120px; /* Align filter box with 120px margin from the left */
+}
+
+.filters {
+  display: flex;
+  gap: 50px; /* Reduce gap so filters stay inside */
+  justify-content: space-around;
+  width: 100%;
+}
+
+.filter-content {
+  flex: 1;
+  text-align: center;
+}
+
+.filter-content select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.plus-icon {
+  width: 10px;
+  height: 10px;
+  fill: white;
+}
+
+.filters select:focus { border-color: var(--primary-color); }
+.filters select:focus + label,
+.filters select:focus + label .filter-icon { color: var(--primary-color); }
+
+.section-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 0 120px;
+  align-items: flex-start;
+  width: 1680px;
+  margin-top: 56px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  padding-left: 0; 
+}
+
+/* Section Headers */
+.section-header1,
+.section-header2,
+.section-header3,
+.section-header4 {
+  font-size: 20pt;  /* Change font size to 20pt */
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  width: 381px;  
+  height: 34px; 
+  margin-bottom: 31px;
+  
+
+  display: flex;
+  justify-content: center;  
+  align-items: center;  /
+    
+}
+
+.section-header1 {
+  background-color: rgb(253, 236, 0);
+}
+.section-header2 {
+  background-color: var(--progress-color);
+}
+.section-header3 {
+  background-color: var(--testing-color);
+}
+.section-header4 {
+  background-color: var(--completed-color);
+}
+
+
+section {
+  flex: 1;
+  min-width: 250px;
+  max-width: 381px;
+  height: 100%;
+  padding: 20px 20px 20px 0; /* Remove left padding (0) */
+  border-radius: 10px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* Card Styles */
+.Muststart,
+.inprogress,
+.readytotest,
+.finish {
+  font-size: 20px;
+  width: 401px;
+  height: 55px;
+  font-weight: bold;
+  padding: 10px;
+  background-color: transparent; 
+  border-radius: 8px;
+  text-align: center;
+  gap: 30px;
+}
+
+#muststart {
+  background-color: white;
+  border: none;
+  margin-left: 120px; /* Align with 120px margin */
+  gap: 30px;
+}
+/* For all task cards */
+#muststart .card,
+#in-progress .card,
+#ready-to-test .card,
+#finished .card {
+  border: 2px solid; /* Force the border to be visible */
+}
+
+#muststart .card {
+  border-color: rgb(253, 236, 0); /* Yellow for Must Start */
+}
+
+#in-progress .card {
+  border-color: var(--progress-color); /* Orange for In Progress */
+}
+
+#ready-to-test .card {
+  border-color: var(--testing-color); /* Pink for Ready to Test */
+}
+
+#finished .card {
+  border-color: var(--completed-color); /* Blue for Finished */
+}
+
+/* Modal Styles */
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.563);
+  backdrop-filter: blur(15px);
+  z-index: 999;
+}
+
+.modal {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 913px;
+  height: 766px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  z-index: 1000;
+  padding: 40px 50px 60px 50px;
+}
+
+.close-icon {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 32px;
+  font-family: "FiraGO", sans-serif;
+  margin-bottom: 45px;
+}
+
+/* Form Styles */
+.form-row {
+  display: flex;
+  gap: 45px;
+  margin-bottom: 45px;
+}
+
+.form-label,
+.form-label-avatar {
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 8px;
+  font-family: sans-serif;
+}
+
+.input-wrapper {
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  display: flex;
+  height: 42px;
+  width: 384px;
+  padding: 12px 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 100%;
+}
+
+/* Avatar Section */
+.avatar-section {
+  width: 813px;
+  height: 145px;
+  margin-bottom: 45px;
+  border: none;
+  background-color: transparent;
+}
+
+.avatar-upload {
+  width: 813px;
+  height: 120px;
+  border-radius: 8px;
+  border: 1px dashed #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.avatar-preview {
+  width: 88px;
+  height: 88px;
+  border-radius: 100px;
+  object-fit: contain;
+}
+
+/* Department Section */
+.department-group {
+  margin-bottom: 45px;
+  width: 384px;
+}
+
+.select-wrapper {
+  border-radius: 6px;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  display: flex;
+  height: 42px;
+  width: 100%;
+  padding: 12px 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.department-select {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  appearance: none;
+}
+
+.select-arrow {
+  width: 18px;
+  aspect-ratio: 1;
+  object-fit: contain;
+}
+
+/* Modal Footer */
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 23px;
+  margin-top: auto;
+}
+
+#cancel-button {
+  width: 102px;
+  height: 42px;
+  background: white;
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit {
+  width: 263px;
+  height: 42px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 1920px) {
+  .filters {
+    margin-bottom: 20px;
+  }
+}
+
+/* Operational Section Styles */
+.op-wrapper {
+  width: 688px;
+  height: 274px;
+  background-color: white;
+  border: #343a40;
+  border-radius: 5px;
+}
+
+.card {
+  width: 401px; 
+  height: 217px; 
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for better look */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0; /* Align the cards to the left edge */
+  margin-bottom: 30px; /* Reduce bottom margin to 5px for better alignment */
+  box-sizing: border-box; /* Ensures padding and borders are included in the width */
+}
+
+.card-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Align the badges to the left */
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+/* Department Badge */
+.category-badge {
+  width: 50%;
+  height: 31px;
+  text-align: center;
+  background-color:var(--primary-color);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 13px;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Apply department badge colors */
+.category-badge.admin {
+  border: #C71E67; /* Admin */
+}
+
+.category-badge.hr {
+  background-color: #C71E21; /* HR */
+}
+
+.category-badge.finance {
+  background-color: #FFD86D; /* Finance */
+}
+
+.category-badge.marketing {
+  background-color: #FD9A6A; /* Marketing */
+}
+
+.category-badge.logistics {
+  background-color: #89B6FF; /* Logistics */
+}
+
+.category-badge.it {
+  background-color: #FFD87D; /* IT */
+}
+
+.category-badge.media {
+  background-color: #FF66A8; /* Media */
+}
+
+/* Difficulty Badge */
+.difficulty-badge {
+  width: 93px;
+  height: 31px;
+  border-radius: 13px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent; /* No background color */
+  background-size: cover; /* Ensure image covers the badge */
+  background-position: center; /* Center the image */
+  position: relative;
+}
+
+/* Assign appropriate colors for Difficulty Badges */
+.difficulty-badge.muststart {
+  background-color: rgb(253, 236, 0); /* Must start */
+}
+
+.difficulty-badge.inprogress {
+  background-color: var(--progress-color); /* In Progress */
+}
+
+.difficulty-badge.readytotest {
+  background-color: var(--testing-color); /* Ready to Test */
+}
+
+.difficulty-badge.finish {
+  background-color: var(--completed-color); /* Finish */
+}
+
+/* Card Content */
+.card {
+  width: 401px;
+  height: 217px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 0;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+.card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.card-footer .avatar {
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card-footer .category-badge {
+  margin-left: 10px;
+}
+
+/* Publish Date (Deadline) Styling */
+.publish-date {
+  font-size: 12px;
+  color: #555;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+/* Comments Icon */
+.comment-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 20px;
+  height: auto;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+}
+.publish-date {
+  font-size: 14px;
+  color: #555;
+  font-weight: bold;
+}
+
+.card-footer .avatar {
+  margin-left: 10px;
+}
+
+.card-footer span {
+  margin-left: 10px;
+}
+
+.publish-date {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Remove Text Decoration from Links */
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Left Align Title & Description with 30px Margin */
+.card-content {
+  text-align: left;
+  margin-left: 30px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-description {
+  font-size: 14px;
+  color: #333;
+}
+
+
+.comment-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 22px;
+  height: 22px;
+}
+
+/* Style for filter labels */
+.filters label {
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* You may also want to add styles for the icons inside the filter */
+.filter-icon {
+  transition: color 0.3s ease; /* Smooth transition for icon color */
+}
+
+
+
+/* card page detiles must go here */
+

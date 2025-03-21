@@ -1,0 +1,62 @@
+[
+    {
+      "id": 896,
+      "name": "გოგო",
+      "surname": "გოგია",
+      "avatar": "https://momentum.redberryinternship.ge/storage/employee-avatars/SYECIO5S0cFAjFHfdVDB9FMA64kOCZ05N8oThMAE.png",
+      "department": {
+        "id": 1,
+        "name": "ადმინისტრაციის დეპარტამენტი"
+      }
+    },
+    {
+      "id": 897,
+      "name": "ბიჭი",
+      "surname": "ბიჭაია",
+      "avatar": "https://momentum.redberryinternship.ge/storage/employee-avatars/KXFvooyvUO15uninjmsOfti0GYqZwCwmy3fzYgTU.jpg",
+      "department": {
+        "id": 1,
+        "name": "ადმინისტრაციის დეპარტამენტი"
+      }
+    },
+    {
+      "id": 898,
+      "name": "ფი",
+      "surname": "დიდი",
+      "avatar": "https://momentum.redberryinternship.ge/storage/employee-avatars/S2w4AR7Y33CHMxaw8TydJFizZuHurBuum9QntMdd.jpg",
+      "department": {
+        "id": 1,
+        "name": "ადმინისტრაციის დეპარტამენტი"
+      }
+    },
+    {
+      "id": 901,
+      "name": "ისტვიკელი",
+      "surname": "ალქაჯი",
+      "avatar": "./img/istvikelialkaji.jpg",
+      "department": {
+        "id": 3,
+        "name": "ფინანსების დეპარტამენტი"
+      }
+    },
+    {
+      "id": 903,
+      "name": "მარგარიტა",
+      "surname": "ღობეგლეჯიაშვილი",
+      "avatar": "./img/istvikelialkaji.jpg",
+      "department": {
+        "id": 3,
+        "name": "ფინანსების დეპარტამენტი"
+      }
+    },
+    {
+      "id": 904,
+      "name": "ჰაიპატიშა",
+      "surname": "ალექსანდროვან",
+      "avatar": "https://momentum.redberryinternship.ge/storage/employee-avatars/VMaq7p3kk0004C4QCa2d4Usvbh0oq6Cf3mxWiV7T.png",
+      "department": {
+        "id": 2,
+        "name": "ადამიანური რესურსების დეპარტამენტი"
+      }
+    }
+  ]
